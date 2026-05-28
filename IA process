@@ -1,0 +1,97 @@
+Esto fue lo que le pdi a la IA (CLAUDE)
+Ayudame a realizar el siguiente proyecto:
+
+Generador de Flujos de retrabajo para un Proceso (el proceso sera la elaboracion de un zapato)
+
+El día 19-MAY-2026 se explico a detalle la entrega del proyecto final, coloco el link del statement y criterios de evaluación. 🤔👀
+
+Favor de entregar el Link del repositorio de GIT, utilicen las herramientas que deseen, solo tomen en cuenta que deben describir su proceso de solución del problema 🧐👀. ESTE PUNTO ES INCLUSIVE MAS IMPORTANTE QUE LA SOLUCIÓN.
+
+Es un caso real, y el requerimiento se los estoy pidiendo como si fuera un cliente desatendido. Estaré asistiendo los dias 21, 25 y 26 de mayo para apoyarlos y por si tienen dudas durante la primer hora.
+
+Adjunto una plantilla "Rework Generator.xlsx" que les puede servir de apoyo. Cualquier duda favor de hacerla saber, igual ayer explique a detalle 🤔🧐.
+
+LES DOY OPCION DE TRABAJAR EN EQUIPO: MÁXIMO 3 INTEGRANTES.
+
+Tip: Si se les complica el desarrollo pueden utilizar la plantilla como input 🤔👀.
+
+Statement:
+Un flujo principal de cualquier proceso requiere retrabajos,asignar manulamente 
+los reprocesos a cada paso conlleva a tiempos muertos,automatizar la generación
+de retrabajos evitara retrasos en cualquier proceso, esto se logra asignando los 
+flujos de reproceso mediante Reason (Razones) con el texto que se muestra en el 
+output del ejercicio.
+
+Input:
+- Proceso Main (Principal) con sus pasos
+- Razones
+- Flujos de retrabajo (pasos)
+
+Requerimiento:
+Se necesita generar mediante cualquier metodo el texto que se indica en el output
+este compuesto de tres partes:
+
+1. GoToFlowPath[Retrabajo/Paso de Retrabajo]
+2. ReturnStep[Paso de retorno de flujo principal]
+3. Reason[Razon para retrabajar un producto]
+
+Output string con retrabajos (por cada paso del flujo principal):
+Step X-->GoToFlowPath[Rework Flow/Step 2]
+ReturnStep[Step3]
+Reason[Rework];
+Empacar Lata-->GoToFlowPath[Retrabajar Empaque/Desempacar]
+ReturnStep[Empacar Lata]
+Reason[Empaque Dañado];
+GoToFlowPath[Retrabajar Leche/Hervir Leche]
+ReturnStep[Empacar Lata]
+Reason[Leche Podrida];
+EVALUACION:
+
+1. QUE FUNCIONE ✅
+2. SU PROCESO DESCRITO PARA LA SOLUCION (FORMATO README.MD)
+Y LINK EN UN REPOSITORIO DE GIT CON LA SOLUCIÓN 🔗
+
+Pueden utilizar cualquier herramienta (🤖 si las IA que se les ocurra) que les permita llegar a la solucion, requiero en su documento README.md todo su proceso desde la herramienta hasta los
+posibles errores o cambios en sus planes (tipo diario de investigación).
+
+Estaré asistiendo los dias de clase para dudas y apoyo en caso de que lo requieran, les coloco una plantilla que les puede ayudar en el proceso.
+
+Y ESTo FUE Lo QUE ME CoNTESTo
+Se ejecutaron 2 comandos
+Se ejecutaron 2 comandos
+Ahora entiendo bien la estructura. Voy a construir el generador completo con:
+
+Una app web interactiva (pre-cargada con el proceso de zapato)
+Un script Python que usa el Excel como input
+Un README.md con todo el proceso documentado
+
+Se usaron 9 herramientas, herramientas cargadas, se crearon 2 archivos
+Se usaron 9 herramientas, herramientas cargadas, se crearon 2 archivos
+El script funciona perfectamente. Ahora el README:
+
+
+Se usaron 4 herramientas, creó un archivo, ejecutó un comando
+Se usaron 4 herramientas, creó un archivo, ejecutó un comando
+El output del Excel es correcto (el error es solo que el directorio uploads es de solo lectura en el sandbox, no afecta la funcionalidad real). El formato generado coincide exactamente con el esperado.
+
+
+Herramientas cargadas, archivo leído, usó una herramienta
+Herramientas cargadas, archivo leído, usó una herramienta
+Aquí están los 3 archivos listos para subir a GitHub:
+
+index.html – App web interactiva, sin dependencias, ábrela directo en el navegador. Viene pre-cargada con el proceso de zapato (8 pasos, 6 flujos de retrabajo). Puedes editar pasos, agregar/quitar retrabajos y generar el output con un clic.
+
+rework_generator.py – Script CLI que también lee la plantilla Excel del profesor:
+
+bash
+python rework_generator.py                          # datos de ejemplo
+python rework_generator.py --excel "Rework Generator (1).xlsx"  # desde Excel
+README.md – El diario de proceso requerido: incluye análisis de la plantilla, decisiones de arquitectura, errores encontrados y cómo se resolvieron, tabla del proceso de zapato, y el output generado completo.
+
+Para subir a GitHub:
+
+Crea un repo nuevo en github.com
+Sube los 3 archivos + el Excel del profesor
+Entrega el link del repo
+El output generado sigue exactamente el formato del Statement: Step-->GoToFlowPath[Flujo/PrimerPaso] / ReturnStep[...] / Reason[...];
+
